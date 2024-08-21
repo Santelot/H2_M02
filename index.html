@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook H2 M02</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .banner .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 5px;
+            border-top: 1px solid white;
+            padding-top: 5px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 15px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: right;
+        }
+        .dialogue {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: right;
+            font-style: italic;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            font-size: 1em;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        .time-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body onload="updateActivities()">
+
+<div class="header">
+    <h1>Playbook H2 M02</h1>
+</div>
+
+<div class="container">
+    <div class="dropdown">
+        <label for="time-select">Tiempo efectivo de Clase:</label>
+        <select id="time-select" onchange="updateActivities()">
+            <option value="50">50 minutos</option>
+            <option value="45">45 minutos</option>
+            <option value="40">40 minutos</option>
+        </select>
+    </div>
+
+    <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+
+    <!-- Actividad 1 (4 pasos) -->
+    <div id="activity-1" class="activity">
+        <div class="banner" onclick="toggleContent('saludo')">
+            <div class="title">
+                <span>📚 Actividad 1: Saludo y Ritual Gnius Club (4 pasos)</span>
+                <span>⏰ Tiempo: 3.5 minutos</span>
+            </div>
+            <div class="subtitle">Dar la bienvenida y preparar el ambiente</div>
+        </div>
+        <div id="saludo" class="content">
+            <div class="section">
+                <div class="step-title">Paso 1 (0.5 minutos): Proyectar Diapositiva 2 "Gnius Club"</div>
+                <div class="section-title">Diálogo del Maestro</div>
+                <div class="dialogue">Buenos días, jóvenes desarrolladores web. Hoy vamos a embarcarnos en una misión increíble: crear y publicar una landing page usando Carrd, inspirándonos en la landing page de Calm.com.</div>
+            </div>
+            <div class="section">
+                <div class="step-title">Paso 2 (2 minutos): Proyectar Diapositiva 3 "¿Cómo están?"</div>
+                <div class="section-title">Diálogo del Maestro</div>
+                <div class="dialogue">Antes de empezar, quiero saber cómo se sienten hoy. Si se sienten bien y motivados, levanten los brazos como si estuvieran celebrando una victoria. Si se sienten un poco cansados, crúcenlos frente a su pecho como si se estuvieran abrazando a ustedes mismos.</div>
+            </div>
+            <div class="section">
+                <div class="step-title">Paso 3 (0.5 minutos): Proyectar Diapositiva 4 "Ritual de Agradecimiento"</div>
+                <div class="section-title">Diálogo del Maestro</div>
+                <div class="dialogue">Juntémos nuestras manos en agradecimiento por la oportunidad de aprender y crear algo nuevo hoy.</div>
+            </div>
+            <div class="section">
+                <div class="step-title">Paso 4 (0.5 minutos): Proyectar Diapositiva 5 "Objetivos de la Misión"</div>
+                <div class="section-title">Diálogo del Maestro</div>
+                <div class="dialogue">Hoy tenemos dos objetivos en nuestra misión: replicar la landing page de Calm.com en Carrd y reflexionar sobre la importancia del No-CODE. Así que vamos para allá.</div>
+            </div>
+        </div>
+    </div>
+<!-- Actividad 2 (3 pasos) -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('state_change')">
+        <div class="title">
+            <span>📚 Actividad 2: State Change (3 pasos)</span>
+            <span>⏰ Tiempo: 3 minutos</span>
+        </div>
+        <div class="subtitle">Activar el cerebro con un desafío más avanzado</div>
+    </div>
+    <div id="state_change" class="content">
+        <div class="section">
+            <div class="step-title">Paso 1 (0.5 minutos): Proyectar Diapositiva 5 "State Change"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Vamos a tomar un momento para activar nuestro cerebro con una actividad igual a la de nuestra clase anterior. Esta vez, aumentaremos un poco la dificultad.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 2 (2 minutos): Proyectar Diapositiva 6 "Código Morse Humano Avanzado"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Vamos a hacer el "Código Morse Humano" pero esta vez será más desafiante. El punto será una palmada y el guión será un salto. Ahora, enviaremos la palabra "Focus" en código Morse: ..-. --- -.-. ..- ... Practiquemos juntos primero y luego intentemos enviar el mensaje completo.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 3 (0.5 minutos): Proyectar Diapositiva 7 "Listos para Continuar"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">¡Excelente trabajo! Ahora que hemos activado nuestras mentes y cuerpos, estamos listos para continuar con la creación de nuestra landing page en Carrd.</div>
+        </div>
+    </div>
+</div>
+<!-- Actividad 3 (12 pasos) -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('challenge')">
+        <div class="title">
+            <span>📚 Actividad 3: Challenge (12 pasos)</span>
+            <span>⏰ Tiempo: 36.5 minutos</span>
+        </div>
+        <div class="subtitle">Crear y publicar una landing page usando Carrd</div>
+    </div>
+    <div id="challenge" class="content">
+        <div class="section">
+            <div class="step-title">Paso 1 (1 minuto): Proyectar Diapositiva 8 "Acceder a Carrd"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Nuestro desafío del día de hoy es crear una landing page en Carrd que se asemeje a la de Calm.com. Primero, vamos a aprender cómo entrar a Carrd. Por favor, vayan a carrd.co en sus navegadores. Verán la página principal de Carrd con varias opciones. Conforme vayan logrando los pasos que irán siguiendo conmigo, levanten su mano para que podamos continuar.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 2 (2 minutos): Proyectar Diapositiva 9 "Elegir punto de inicio"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">No necesitan crear una cuenta para comenzar. Simplemente hagan clic en el botón "Choose a starting point" que verán en el centro de la pantalla. Esto les permitirá empezar a diseñar su página de inmediato sin registrarse.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 3 (2 minutos): Proyectar Diapositiva 10 "Seleccionar Blank"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">A continuación, verán varias plantillas disponibles. Seleccionen la opción "Blank" para empezar desde cero. Esto nos permitirá tener total libertad para diseñar nuestra landing page como queremos.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 4 (2 minutos): Proyectar Diapositiva 11 "Leer Instrucciones"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Antes de comenzar, verán una capa con "Useful instructions" en el editor de Carrd. Lean estas instrucciones para familiarizarse con la interfaz y las herramientas disponibles. Estas instrucciones les darán una visión general de cómo funciona el editor y les ayudará a empezar. Recuerden que pueden volver a encontrar estas guías en el menú de arriba a la derecha.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 5 (2 minutos): Proyectar Diapositiva 12 "Cambiar Imagen de Fondo"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Ahora vamos a cambiar la imagen de fondo. Hagan clic en cualquier parte del fondo de la página para desplegar el menú de opciones. Esto les permitirá acceder a las configuraciones del fondo.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 6 (2 minutos): Proyectar Diapositiva 13 "Estilo de Fondo: Imagen"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">En el menú desplegado, verán que el estilo de fondo por defecto es "Color". Cambien este estilo a "Image". Aquí pueden elegir una imagen de la librería de Carrd o subir su propia foto de una montaña para que se parezca a la página de Calm.com.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 7 (2 minutos): Proyectar Diapositiva 14 "Ajustar Opacidad del Overlay"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Una vez que hayan seleccionado la imagen, desplácense hacia abajo en el menú hasta encontrar la opción "Overlay". Seleccionen "Color" para aplicar una capa de color sobre la imagen. Luego, ajusten la opacidad del overlay moviendo el slider hacia la izquierda o derecha. Esto les permitirá oscurecer o aclarar la imagen de fondo para que el texto se lea mejor y tenga un buen contraste.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 8 (1 minuto): Proyectar Diapositiva 15 "Confirmar Cambios"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Después de ajustar la opacidad del overlay, confirmen los cambios y comiencen a explorar la interfaz de Carrd. Pueden empezar a añadir y acomodar elementos para replicar la landing page de Calm.com. Recuerden explorar todas las opciones disponibles y experimentar con diferentes configuraciones para lograr el mejor resultado.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 9 (0.5 minutos): Proyectar Diapositiva 16 "Creación de la Landing Page"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Ahora tienen 30 minutos para trabajar en la creación de su landing page en Carrd. Recuerden que el objetivo es replicar la landing page de Calm.com lo más fielmente posible. Utilicen las herramientas y configuraciones que aprendieron y no duden en ser creativos. ¡Manos a la obra!</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 10 (20 minutos): Proyectar Diapositiva 17 con un cronómetro de 20 minutos</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">N/A (Solo se proyecta el cronómetro).</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 11 (3 minutos): Proyectar Diapositiva 18 "Compartir Páginas"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Ahora que han terminado sus páginas, me gustaría que tres voluntarios nos muestren sus landing pages con el grupo. Compararemos sus páginas con la landing page de Calm.com para ver cómo se asemejan.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 12 (0.5 minutos): Proyectar Diapositiva 19 "Objetivos de la Misión"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Felicitaciones, hemos avanzado en el primer objetivo de nuestra misión al replicar la landing page de Calm.com en Carrd. Ahora, reflexionaremos sobre la importancia del No-CODE.</div>
+        </div>
+    </div>
+</div>
+<!-- Actividad 4 (5 pasos) -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('reflexion')">
+        <div class="title">
+            <span>📚 Actividad 4: Reflexión (5 pasos)</span>
+            <span>⏰ Tiempo: 6.5 minutos</span>
+        </div>
+        <div class="subtitle">Reflexionar sobre la importancia del No-CODE</div>
+    </div>
+    <div id="reflexion" class="content">
+        <div class="section">
+            <div class="step-title">Paso 1 (3 minutos): Proyectar Diapositiva 20 "Reflexión sobre el No-CODE"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Ahora que hemos trabajado en nuestra landing page, tomemos un momento para reflexionar sobre la importancia del No-CODE. ¿Por qué creen que herramientas como Carrd son importantes en el mundo actual?</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 2 (1 minuto): Proyectar Diapositiva 21 "Futuro"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Las herramientas No-CODE permiten a personas sin conocimientos técnicos crear aplicaciones y sitios web. Esto democratiza la tecnología y permite que más personas puedan expresar sus ideas y solucionar problemas de manera rápida y eficiente. Piensen en cómo han podido crear su landing page hoy sin necesidad de programar. Imaginen, ¿Cómo esto puede beneficiarles en sus futuros proyectos o en sus carreras?</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 3 (1 minuto): Proyectar Diapositiva 22 "Conclusión"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Hemos visto cómo el No-CODE puede abrir muchas puertas y facilitar la innovación. Permite que más personas participen en la creación de soluciones tecnológicas, haciendo que la tecnología sea más accesible para todos. Felicitaciones por su excelente trabajo hoy. Sigamos explorando y creando con estas herramientas poderosas.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 4 (1 minuto): Proyectar Diapositiva 23 "Objetivos de la misión"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">¡Con esto hemos completado nuestros objetivos de la misión de hoy!</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 5 (0.5 minutos): Proyectar Diapositiva 24 "You've got mon-e" y celebrar con los genios</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">N/A (Solo la celebración).</div>
+        </div>
+    </div>
+</div>
+<!-- Actividad 5 (1 paso) -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('honor_dojo')">
+        <div class="title">
+            <span>📚 Actividad 5: Honor de Dojo (1 paso)</span>
+            <span>⏰ Tiempo: 1 minuto</span>
+        </div>
+        <div class="subtitle">Recoger y ordenar el laboratorio</div>
+    </div>
+    <div id="honor_dojo" class="content">
+        <div class="section">
+            <div class="step-title">Paso 1 (1 minuto): Proyectar Diapositiva 25 y reproducir la animación de honor de dojo</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Recuerden cerrar sus sillas, recoger sus cosas y acomodar el laboratorio para que pueda recibir la siguiente tanda de genios.</div>
+        </div>
+    </div>
+</div>
+
+
+</div> <!-- Cierre del container -->
+
+<!-- Scripts adicionales si es necesario -->
+<script>
+    function updateActivities() {
+        var selectedTime = document.getElementById('time-select').value;
+        var activities = document.getElementsByClassName('activity');
+
+        document.getElementById('selected-time').innerText = "Tiempo efectivo de clase: " + selectedTime + " minutos";
+
+        for (var i = 0; i < activities.length; i++) {
+            activities[i].style.display = 'block';
+        }
+
+        if (selectedTime === '45') {
+            document.getElementById('activity-2').style.display = 'none';
+        }
+
+        if (selectedTime === '40') {
+            document.getElementById('activity-2').style.display = 'none';
+            document.getElementById('activity-4').style.display = 'none';
+        }
+    }
+</script>
+
+
+</body>
+</html>
